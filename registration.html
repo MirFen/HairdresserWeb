@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/registration.css">
+</head>
+
+<body>
+  <form id="registration-form" class="registration">
+    <label>
+      <span>Zabieg:</span>
+      <input type="text" id="treatment-input" name="treatment" readonly>
+    </label>
+    <br>
+    <label>
+      <span>Cena:</span>
+      <input type="number" id="price-input" name="price" readonly>
+    </label>
+    <br>
+    <label>
+      <span>Imię:</span>
+      <input type="text" name="first-name" required>
+    </label>
+    <br>
+    <label>
+      <span>Nazwisko:</span>
+      <input type="text" name="last-name" required>
+    </label>
+    <br>
+    <label>
+      <label for="phone">Telefon:</label>
+      <input type="tel" id="phone" name="phone" required>
+      <script>
+        function validatePhone(phone) {
+          var re = /^\+?\d{1,3}?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/;
+          return re.test(phone);
+        }
+        document.getElementById("form").onsubmit = function () {
+          var phone = document.getElementById("phone").value;
+          if (!validatePhone(phone)) {
+            alert("Invalid phone number!");
+            return false;
+          }
+        };
+
+      </script>
+    </label>
+    <br>
+    <label>
+      <span>E-mail:</span>
+      <input type="email" name="email">
+    </label>
+    <br>
+    <label>
+      <span>Data wizyty:</span>
+      <input type="date" name="appointment-date" required>
+    </label>
+    <br>
+    <label>
+      <span>Godzina wizyty:</span>
+      <input type="time" name="appointment-time" required>
+    </label>
+    <br>
+    <button type="submit" >Zarejestruj wizytę</button>
+  </form>
+  <script src="phoneno-+international-format.js"></script>
+</body>
+
+</html>

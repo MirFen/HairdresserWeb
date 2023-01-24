@@ -1,0 +1,39 @@
+@import 'colors';
+@import 'animation';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.registration{
+    // position: absolute;
+	// width: 100%;
+	// height: 100%;
+	// padding: 20px;
+	// font-size: 25px;
+    display: flex;
+		justify-content: center;
+		align-items: center;
+        flex-direction: column;
+		padding: 5px;
+    // font-size: 16px;
+    input{
+
+        display: flex;
+		justify-content: center;
+		align-items: center;
+        flex-direction: column;
+        width: 150px;
+		padding: 5px;
+    }
+    button{
+    	display: flex;
+		justify-content: center;
+		align-items: center;
+        flex-direction: column;
+		padding: 10px;
+    }
+}
